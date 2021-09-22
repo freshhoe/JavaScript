@@ -10,10 +10,7 @@ function deepClone(object) {
   function cloneObject() {
     const clone = {};
 
-    for (let key in object) {
-      if (Object.prototype.hasOwnProperty.call(object, key))
-        clone[key] = deepClone(object[key]);
-    }
+    Object.keys(object).forEach(key => (clone[key] = deepClone(object[key])));
 
     return clone;
   }
