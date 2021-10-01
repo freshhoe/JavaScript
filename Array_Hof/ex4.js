@@ -6,7 +6,7 @@ let todos = [
 ];
 
 const addTodo = (todos, newTodo) => {
-  return;
+  return [newTodo, ...todos];
 };
 
 todos = addTodo(todos, { id: 4, content: 'Test', completed: false });
