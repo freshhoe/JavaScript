@@ -5,14 +5,6 @@ const todos = [
   { id: 1, content: 'Javascript', completed: false }
 ];
 
-// before
-const getValues = (todos, key) => {
-  return todos.map(todo => {
-    return todo[key];
-  });
-};
-
-// after
 const getValues = (todos, key) => todos.map(todo => todo[key]);
 
 console.log(getValues(todos, 'id')); // [3, 2, 1]

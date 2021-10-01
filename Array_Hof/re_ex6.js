@@ -1,23 +1,21 @@
-// 특정 요소 삭제
+// 6. 특정 요소의 프로퍼티 값 반전
 let todos = [
   { id: 3, content: 'HTML', completed: false },
   { id: 2, content: 'CSS', completed: true },
   { id: 1, content: 'Javascript', completed: false }
 ];
 
-// before
-// const removeTodo = (todos, id) => {
-//   return todos.filter(todo => todo.id !== id);
-// };
+const toggleCompletedById = (todos, id) =>
+  todos.map(todo =>
+    todo.id === id ? { ...todo, completed: !todo.completed } : todo
+  );
 
-//after
-const removeTodo = (todos, id) => todos.filter(todo => todo.id !== id);
-
-todos = removeTodo(todos, 2);
+todos = toggleCompletedById(todos, 2);
 console.log(todos);
 /*
   [
     { id: 3, content: 'HTML', completed: false },
+    { id: 2, content: 'CSS', completed: false },
     { id: 1, content: 'Javascript', completed: false }
   ]
-*/
+  */

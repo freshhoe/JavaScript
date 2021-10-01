@@ -5,9 +5,13 @@ let todos = [
   { id: 1, content: 'Javascript', completed: false }
 ];
 
-const addTodo = (todos, newTodo) => {
-  return [newTodo, ...todos];
-};
+// before
+// const addTodo = (todos, newTodo) => {
+//   return [newTodo, ...todos];
+// };
+
+// after
+const addTodo = (todos, newTodo) => [newTodo, ...todos];
 
 todos = addTodo(todos, { id: 4, content: 'Test', completed: false });
 console.log(todos);
