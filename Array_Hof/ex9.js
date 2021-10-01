@@ -6,6 +6,11 @@ const todos = [
 ];
 
 const getMaxId = todos => Math.max(...todos.map(todo => todo.id), 0);
+// 또는
+// const getMaxId = todos =>
+//   todos.map(todo => todo.id).length
+//     ? Math.max(...todos.map(todo => todo.id))
+//     : 0;
 
 console.log(getMaxId(todos)); // 3
 console.log(getMaxId([])); // 0
