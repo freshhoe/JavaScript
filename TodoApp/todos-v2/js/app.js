@@ -109,7 +109,7 @@ window.addEventListener('DOMContentLoaded', fetchTodos);
 
 $newTodo.onkeyup = e => {
   if (e.key !== 'Enter') return;
-  e.preventDefault();
+  // e.preventDefault();
 
   const content = $newTodo.value.trim();
 
