@@ -1,9 +1,5 @@
 // 4. 대문자 찾기
 function countUpperCase(s) {
-  let answer = 0;
-  const regExp = /[A-Z]+/g;
-  answer = s.match(regExp).length;
-
-  console.log(answer);
+  console.log(s.match(/[A-Z]+/g).length);
 }
 countUpperCase('KoreaTimeGood'); // => 3
