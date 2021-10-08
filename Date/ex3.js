@@ -1,10 +1,8 @@
 // 3. 1일의 요일을 나타내는 정수(0 ~ 6) 구하기.
 // 0은 일요일이고 6은 토요일이다.
 function getFirstDayOfMonth(year, month) {
-  let answer = 0;
-  answer = new Date(year, month).getDay();
-
-  console.log(answer);
+  console.log(new Date(year, month).getDay());
+  // return new Date(year, month).getDay();
 }
 
 // 2021년 1월 1일은 금요일
